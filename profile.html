@@ -1,103 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NextGen Profile Site</title>
+    <title>Profil Lengkap - NextGen Profile Site</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body onload="greetUser()" class="bg-white text-gray-800 scroll-smooth">
-    <!-- Navbar -->
-    <header
-      class="flex justify-between items-center px-6 py-4 shadow-md bg-white sticky top-0 z-50"
-    >
-      <div class="text-xl font-bold text-blue-600">NextGen Profile Site</div>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#home" class="hover:text-blue-600 transition">Home</a>
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-        <a href="#blog" class="hover:text-blue-600 transition">Blog</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-      </nav>
+
+  <body class="bg-gray-50 text-gray-800">
+    <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold text-blue-600">NextGen Profile Site</div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden text-blue-600 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="index.html" class="text-blue-600 hover:underline"
+            >Kembali ke Beranda</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden mt-4 px-6 space-y-2 text-sm font-medium"
+      >
+        <a href="index.html" class="block text-blue-600 hover:underline"
+          >Kembali ke Beranda</a
+        >
+      </div>
     </header>
 
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="bg-gradient-to-br from-blue-600 to-blue-800 text-white py-24 px-6 text-center"
-    >
-      <div class="max-w-3xl mx-auto">
-        <h1
-          class="text-4xl md:text-5xl font-bold mb-4 leading-tight"
-          id="greeting"
+    <main class="max-w-5xl mx-auto px-6 py-16">
+      <!-- Intro Section -->
+      <section class="bg-white p-8 rounded-lg shadow-md">
+        <div
+          class="flex flex-col md:flex-row items-center md:items-start gap-8"
         >
-          Welcome to NextGen Profile Site
-        </h1>
-        <p class="text-lg md:text-xl text-blue-100 mb-6">
-          Discover who we are, what we build, and how we grow.
-        </p>
-        <a
-          href="#projects"
-          class="inline-block bg-white text-blue-700 font-semibold px-6 py-3 rounded-lg shadow hover:bg-gray-100 transition"
-        >
-          View Projects
-        </a>
-      </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="py-16 px-6 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-4">About</h2>
-        <p class="text-gray-700 leading-relaxed">
-          NextGen Profile Site adalah platform personal branding yang didesain
-          untuk memperkenalkan siapa kami dan apa yang kami kerjakan dalam dunia
-          digital. Kami percaya pada kolaborasi, inovasi, dan pertumbuhan
-          berkelanjutan.
-        </p>
-      </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-16 px-6 bg-white">
-      <div class="max-w-5xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-4">Projects</h2>
-        <p class="text-gray-700 mb-8">
-          Beberapa proyek yang pernah kami kerjakan:
-        </p>
-        <div class="grid md:grid-cols-3 gap-6">
-          <div class="bg-gray-100 p-6 rounded shadow">
-            <h3 class="font-bold text-lg mb-2">Project A</h3>
-            <p class="text-sm text-gray-600">
-              Website portfolio pribadi dengan CMS Laravel.
+          <img
+            src="/assets/images/profile.jpeg"
+            alt="Iqbal Fahrozi"
+            class="w-40 h-40 rounded-full shadow-md"
+          />
+          <div>
+            <h1 class="text-3xl font-bold text-gray-800 mb-2">Iqbal Fahrozi</h1>
+            <p class="text-blue-600 font-semibold mb-4">
+              Web Developer & Technology Enthusiast
             </p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow">
-            <h3 class="font-bold text-lg mb-2">Project B</h3>
-            <p class="text-sm text-gray-600">
-              Sistem manajemen pelatihan karyawan dengan dashboard analitik.
-            </p>
-          </div>
-          <div class="bg-gray-100 p-6 rounded shadow">
-            <h3 class="font-bold text-lg mb-2">Project C</h3>
-            <p class="text-sm text-gray-600">
-              Aplikasi mobile untuk absensi dan pengajuan cuti berbasis Flutter.
+            <p class="text-gray-700 leading-relaxed">
+              Saya adalah seorang pengembang web profesional dengan pengalaman
+              lebih dari 5 tahun di bidang teknologi web, mobile, dan cloud.
+              Berfokus pada pembuatan sistem berbasis Laravel, Livewire,
+              Tailwind CSS, dan JavaScript. Saya percaya bahwa teknologi adalah
+              alat untuk menyelesaikan masalah nyata.
             </p>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-16 px-6 bg-gray-50">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-4">Skills</h2>
-        <p class="text-gray-700 mb-6">
-          Berikut adalah keahlian utama kami dalam pengembangan digital:
-        </p>
-        <div class="flex flex-wrap justify-center gap-4">
+      <!-- Education & Certification -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Pendidikan & Sertifikasi</h2>
+        <div class="bg-white p-6 rounded-lg shadow space-y-4">
+          <div>
+            <h3 class="font-semibold">Sarjana Teknik Informatika</h3>
+            <p class="text-sm text-gray-600">Universitas Pamulang, 2025</p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Sertifikasi Laravel Developer</h3>
+            <p class="text-sm text-gray-600">WPU Course, 2025</p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Google Cloud Fundamentals</h3>
+            <p class="text-sm text-gray-600">Google Cloud Training, 2023</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience & Projects -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Pengalaman & Proyek Unggulan</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-lg font-semibold text-blue-700 mb-2">
+              Tangcity Academy
+            </h3>
+            <p class="text-sm text-gray-600">
+              Platform e-learning modern yang dilengkapi dengan manajemen kelas,
+              video pembelajaran, kuis, dan integrasi CMS admin berbasis Laravel
+              + Livewire.
+            </p>
+            <a
+              href="https://academy.tangcity.cloud"
+              target="_blank"
+              class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-lg font-semibold text-blue-700 mb-2">
+              Tangcity Sekolah
+            </h3>
+            <p class="text-sm text-gray-600">
+              Aplikasi sistem informasi sekolah untuk absensi, laporan nilai,
+              manajemen guru & siswa, serta dashboard akademik.
+            </p>
+            <a
+              href="https://sekolah.tangcity.cloud"
+              target="_blank"
+              class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="text-lg font-semibold text-blue-700 mb-2">
+              Tangcity Cloud
+            </h3>
+            <p class="text-sm text-gray-600">
+              Platform internal untuk deployment Docker berbasis Coolify & CI/CD
+              pipeline. Mengelola lebih dari 10 proyek aktif secara efisien.
+            </p>
+            <a
+              href="https://tangcity.cloud"
+              target="_blank"
+              class="text-blue-600 text-sm font-medium mt-2 inline-block hover:underline"
+              >Lihat Proyek</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Keahlian Utama</h2>
+        <div class="flex flex-wrap gap-4">
           <span
             class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
             >HTML & CSS</span
@@ -108,98 +165,207 @@
           >
           <span
             class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
-            >Laravel</span
+            >Laravel & Livewire</span
           >
           <span
             class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
-            >JavaScript</span
+            >JavaScript & Alpine.js</span
           >
           <span
             class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
-            >Flutter</span
+            >Docker & DevOps</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
+            >Flutter (Mobile)</span
+          >
+          <span
+            class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full font-medium"
+            >MySQL & REST API</span
           >
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="py-16 px-6 bg-white">
-      <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-3xl font-semibold mb-4">Blog</h2>
-        <p class="text-gray-700">
-          Belum ada artikel, tetapi nantikan insight dan tulisan dari kami
-          tentang dunia teknologi dan pengembangan karier!
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 px-6 bg-gray-100">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl font-semibold mb-8 text-center">Contact</h2>
-        <div class="grid md:grid-cols-2 gap-10">
-          <form
-            id="contactForm"
-            class="space-y-5 bg-white p-6 rounded-lg shadow"
-          >
-            <div>
-              <label class="block font-medium mb-1">Nama:</label>
-              <input
-                type="text"
-                name="nama"
-                required
-                class="w-full border border-gray-300 rounded px-3 py-2"
-              />
-            </div>
-            <div>
-              <label class="block font-medium mb-1">Email:</label>
-              <input
-                type="email"
-                name="email"
-                required
-                class="w-full border border-gray-300 rounded px-3 py-2"
-              />
-            </div>
-            <div>
-              <label class="block font-medium mb-1">Pesan:</label>
-              <textarea
-                name="pesan"
-                rows="4"
-                required
-                class="w-full border border-gray-300 rounded px-3 py-2"
-              ></textarea>
-            </div>
-            <button
-              type="submit"
-              class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
+      <!-- Contact -->
+      <section class="mt-12">
+        <h2 class="text-2xl font-bold mb-6">Kontak & Media Sosial</h2>
+        <div class="bg-white p-6 rounded-lg shadow">
+          <p class="text-gray-700">
+            Saya terbuka untuk kerja sama, proyek freelance, atau diskusi
+            teknologi. Silakan hubungi saya melalui email atau media sosial
+            berikut:
+          </p>
+          <div class="mt-4 flex flex-wrap gap-6">
+            <a
+              href="https://github.com/iqbalfhz"
+              target="_blank"
+              class="flex items-center gap-1 text-sm text-gray-700 hover:text-black"
             >
-              Submit
-            </button>
-          </form>
-
-          <div class="bg-white p-6 rounded-lg shadow">
-            <h4 class="font-semibold mb-2">Hasil:</h4>
-            <pre
-              id="commentResult"
-              class="whitespace-pre-wrap text-sm text-gray-700"
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.022c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.775.418-1.305.762-1.605-2.665-.3-5.467-1.335-5.467-5.93 0-1.31.469-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.51 11.51 0 0 1 3-.405c1.02.005 2.045.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.435.375.81 1.096.81 2.22v3.293c0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"
+                />
+              </svg>
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/iqbal-fahrozi-557951371"
+              target="_blank"
+              class="flex items-center gap-1 text-sm text-blue-700 hover:text-blue-900"
             >
-Isi hasil akan tampil di sini</pre
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.25c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.25h-3v-5.604c0-1.337-.026-3.059-1.865-3.059-1.865 0-2.151 1.455-2.151 2.96v5.703h-3v-10h2.881v1.367h.041c.401-.76 1.379-1.562 2.837-1.562 3.032 0 3.591 1.996 3.591 4.59v5.605z"
+                />
+              </svg>
+              LinkedIn
+            </a>
+            <a
+              href="mailto:iqbalfahrozi284@gmail.com"
+              class="flex items-center gap-1 text-sm text-red-600 hover:text-red-800"
             >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 13.065L1.85 6.002h20.3L12 13.065zm0 2.192l10.15-7.063V18H1.85v-9.806L12 15.257z"
+                />
+              </svg>
+              Email
+            </a>
+            <a
+              href="https://wa.me/6282124590919"
+              target="_blank"
+              class="flex items-center gap-1 text-sm text-green-600 hover:text-green-800"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-4 h-4"
+                fill="currentColor"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  d="M16.002 3C9.373 3 4 8.373 4 15.002a11.91 11.91 0 0 0 1.627 6.006L4 29l8.22-2.608a11.93 11.93 0 0 0 3.782.608c6.627 0 12-5.373 12-12.002S22.63 3 16.002 3zm0 21.85c-1.246 0-2.47-.26-3.6-.766l-.26-.115-4.876 1.55 1.59-4.756-.167-.273a9.791 9.791 0 0 1-1.5-5.192c0-5.383 4.38-9.763 9.763-9.763 5.383 0 9.763 4.38 9.763 9.763s-4.38 9.76-9.763 9.76zm5.472-7.012c-.3-.15-1.782-.876-2.058-.978-.276-.1-.48-.15-.684.15-.2.3-.78.978-.957 1.18-.175.2-.35.225-.648.075a7.948 7.948 0 0 1-2.334-1.428 8.795 8.795 0 0 1-1.632-2.007c-.17-.3-.017-.465.13-.615.133-.132.3-.35.45-.525.15-.174.2-.3.3-.5.1-.2.05-.375-.025-.525-.075-.15-.683-1.648-.935-2.26-.25-.6-.5-.525-.683-.525h-.584c-.2 0-.5.075-.765.375a3.217 3.217 0 0 0-1.006 2.39c0 1.4 1.025 2.756 1.17 2.954.15.2 2.023 3.1 4.91 4.35 2.885 1.25 2.885.834 3.408.784.525-.05 1.782-.726 2.035-1.428.25-.7.25-1.3.175-1.428-.075-.125-.275-.2-.575-.35z"
+                />
+              </svg>
+              WhatsApp
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="text-center text-sm py-6 text-gray-500">
-      Created by
-      <a
-        href="https://github.com/iqbalfhz"
-        class="underline hover:text-blue-600"
-        >Iqbal Fahrozi</a
+    <footer class="bg-gray-900 text-gray-300 py-8 mt-16">
+      <div
+        class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
       >
+        <div class="text-center md:text-left text-sm">
+          &copy; <span id="year"></span> NextGen Profile Site. Created by
+          <a
+            href="https://github.com/iqbalfhz"
+            target="_blank"
+            class="underline hover:text-white font-medium"
+          >
+            Iqbal Fahrozi
+          </a>
+        </div>
+        <div class="flex items-center gap-4 text-sm">
+          <a
+            href="mailto:iqbalfahrozi284@gmail.com"
+            class="hover:text-white flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm0 2.828V20h16V6.828l-8 8-8-8z"
+              />
+            </svg>
+            Email
+          </a>
+          <a
+            href="https://github.com/iqbalfhz"
+            target="_blank"
+            class="hover:text-white flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.02c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.084-.729.084-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.107-.776.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.933 0-1.31.47-2.382 1.235-3.222-.135-.305-.54-1.527.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.65.24 2.87.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.807 5.625-5.48 5.922.426.37.81 1.096.81 2.213v3.293c0 .322.21.698.825.578C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
+          <a
+            href="https://www.linkedin.com/in/iqbal-fahrozi-557951371"
+            target="_blank"
+            class="hover:text-white flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM7.998 20H4.997V9h3.001v11zm-1.501-12.27c-.966 0-1.751-.792-1.751-1.765s.785-1.765 1.751-1.765 1.751.792 1.751 1.765-.785 1.765-1.751 1.765zM20 20h-2.999v-5.5c0-3.309-4.002-3.058-4.002 0V20H10V9h2.999v1.561C13.984 8.352 20 8.162 20 13.231V20z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="https://wa.me/6282124590919"
+            target="_blank"
+            class="hover:text-white flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.09 1.6 5.86L0 24l6.31-1.64A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm6.38 17.14c-.26.73-1.54 1.35-2.12 1.43-.54.07-1.2.1-3.47-.74-2.9-1.16-4.75-4.1-4.9-4.3-.14-.19-1.17-1.56-1.17-2.97s.74-2.1 1.01-2.38c.26-.27.57-.34.76-.34.19 0 .38.01.55.01.17 0 .42-.07.65.49.26.63.88 2.18.96 2.34.08.16.13.35.02.56-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.14-.3.29-.13.58.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.29 2.35 1.43.3.13.47.11.65-.07.19-.19.75-.87.95-1.17.2-.3.39-.24.66-.14.27.09 1.7.8 1.99.95.29.14.48.21.55.33.08.12.08.7-.18 1.43z"
+              />
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
     </footer>
 
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle mobile menu
+      document
+        .getElementById("mobileMenuButton")
+        .addEventListener("click", () => {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
     <script src="js/script.js"></script>
   </body>
 </html>

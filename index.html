@@ -9,18 +9,74 @@
   </head>
   <body onload="greetUser()" class="bg-white text-gray-800 scroll-smooth">
     <!-- Navbar -->
-    <header
-      class="flex justify-between items-center px-6 py-4 shadow-md bg-white sticky top-0 z-50"
-    >
-      <div class="text-xl font-bold text-blue-600">NextGen Profile Site</div>
-      <nav class="space-x-6 text-sm font-medium">
-        <a href="#home" class="hover:text-blue-600 transition">Home</a>
-        <a href="#about" class="hover:text-blue-600 transition">About</a>
-        <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-        <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-        <a href="#blog" class="hover:text-blue-600 transition">Blog</a>
-        <a href="#contact" class="hover:text-blue-600 transition">Contact</a>
-      </nav>
+    <header class="bg-white shadow-md py-4 px-6 sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="text-xl font-bold text-blue-600">NextGen Profile Site</div>
+
+        <!-- Mobile menu button -->
+        <button
+          id="mobileMenuButton"
+          class="md:hidden text-blue-600 focus:outline-none"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+
+        <!-- Desktop menu -->
+        <nav class="hidden md:flex space-x-6 text-sm font-medium">
+          <a href="index.html#home" class="hover:text-blue-600 transition"
+            >Home</a
+          >
+          <a href="index.html#about" class="hover:text-blue-600 transition"
+            >About</a
+          >
+          <a href="index.html#projects" class="hover:text-blue-600 transition"
+            >Projects</a
+          >
+          <a href="index.html#skills" class="hover:text-blue-600 transition"
+            >Skills</a
+          >
+          <a href="index.html#blog" class="hover:text-blue-600 transition"
+            >Blog</a
+          >
+          <a href="index.html#contact" class="hover:text-blue-600 transition"
+            >Contact</a
+          >
+          <a href="profile.html" class="hover:text-blue-600 transition"
+            >Profile</a
+          >
+        </nav>
+      </div>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobileMenu"
+        class="hidden md:hidden mt-4 px-6 space-y-2 text-sm font-medium"
+      >
+        <a href="index.html#home" class="block hover:text-blue-600">Home</a>
+        <a href="index.html#about" class="block hover:text-blue-600">About</a>
+        <a href="index.html#projects" class="block hover:text-blue-600"
+          >Projects</a
+        >
+        <a href="index.html#skills" class="block hover:text-blue-600">Skills</a>
+        <a href="index.html#blog" class="block hover:text-blue-600">Blog</a>
+        <a href="index.html#contact" class="block hover:text-blue-600"
+          >Contact</a
+        >
+        <a href="profile.html" class="block hover:text-blue-600">Profile</a>
+      </div>
     </header>
 
     <!-- Modal Nama -->
@@ -541,9 +597,8 @@
       <div
         class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0"
       >
-        <!-- Kiri: Credit -->
         <div class="text-center md:text-left text-sm">
-          &copy; <span id="footerYear"></span> NextGen Profile Site. Created by
+          &copy; <span id="year"></span> NextGen Profile Site. Created by
           <a
             href="https://github.com/iqbalfhz"
             target="_blank"
@@ -552,27 +607,89 @@
             Iqbal Fahrozi
           </a>
         </div>
-
-        <!-- Kanan: Social Links -->
         <div class="flex items-center gap-4 text-sm">
-          <a href="mailto:iqbalfhz@gmail.com" class="hover:text-white"
-            >📧 Email</a
+          <a
+            href="mailto:iqbalfahrozi284@gmail.com"
+            class="hover:text-white flex items-center gap-1"
           >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 4a2 2 0 012-2h16a2 2 0 012 2v16a2 2 0 01-2 2H4a2 2 0 01-2-2V4zm2 0v.01L12 13 20 4.01V4H4zm0 2.828V20h16V6.828l-8 8-8-8z"
+              />
+            </svg>
+            Email
+          </a>
           <a
             href="https://github.com/iqbalfhz"
             target="_blank"
-            class="hover:text-white"
-            >🐙 GitHub</a
+            class="hover:text-white flex items-center gap-1"
           >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.373 0 12c0 5.303 3.438 9.8 8.205 11.387.6.113.82-.258.82-.577v-2.02c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.084-.729.084-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.835 2.807 1.305 3.492.998.107-.776.418-1.305.762-1.605-2.665-.305-5.467-1.334-5.467-5.933 0-1.31.47-2.382 1.235-3.222-.135-.305-.54-1.527.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.045.138 3.003.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.65.24 2.87.12 3.176.765.84 1.23 1.912 1.23 3.222 0 4.61-2.807 5.625-5.48 5.922.426.37.81 1.096.81 2.213v3.293c0 .322.21.698.825.578C20.565 21.795 24 17.298 24 12c0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+            GitHub
+          </a>
           <a
-            href="https://www.linkedin.com/in/iqbalfhz"
+            href="https://www.linkedin.com/in/iqbal-fahrozi-557951371"
             target="_blank"
-            class="hover:text-white"
-            >💼 LinkedIn</a
+            class="hover:text-white flex items-center gap-1"
           >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M19 0h-14C2.239 0 0 2.239 0 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5V5c0-2.761-2.238-5-5-5zM7.998 20H4.997V9h3.001v11zm-1.501-12.27c-.966 0-1.751-.792-1.751-1.765s.785-1.765 1.751-1.765 1.751.792 1.751 1.765-.785 1.765-1.751 1.765zM20 20h-2.999v-5.5c0-3.309-4.002-3.058-4.002 0V20H10V9h2.999v1.561C13.984 8.352 20 8.162 20 13.231V20z"
+              />
+            </svg>
+            LinkedIn
+          </a>
+          <a
+            href="https://wa.me/6282124590919"
+            target="_blank"
+            class="hover:text-white flex items-center gap-1"
+          >
+            <svg
+              class="w-4 h-4"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.09 1.6 5.86L0 24l6.31-1.64A11.94 11.94 0 0012 24c6.63 0 12-5.37 12-12S18.63 0 12 0zm6.38 17.14c-.26.73-1.54 1.35-2.12 1.43-.54.07-1.2.1-3.47-.74-2.9-1.16-4.75-4.1-4.9-4.3-.14-.19-1.17-1.56-1.17-2.97s.74-2.1 1.01-2.38c.26-.27.57-.34.76-.34.19 0 .38.01.55.01.17 0 .42-.07.65.49.26.63.88 2.18.96 2.34.08.16.13.35.02.56-.1.2-.15.32-.3.49-.15.17-.31.38-.44.51-.15.14-.3.29-.13.58.17.29.76 1.25 1.63 2.02 1.12.99 2.06 1.29 2.35 1.43.3.13.47.11.65-.07.19-.19.75-.87.95-1.17.2-.3.39-.24.66-.14.27.09 1.7.8 1.99.95.29.14.48.21.55.33.08.12.08.7-.18 1.43z"
+              />
+            </svg>
+            WhatsApp
+          </a>
         </div>
       </div>
     </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Toggle mobile menu
+      document
+        .getElementById("mobileMenuButton")
+        .addEventListener("click", () => {
+          const menu = document.getElementById("mobileMenu");
+          menu.classList.toggle("hidden");
+        });
+    </script>
 
     <script src="js/script.js"></script>
   </body>
